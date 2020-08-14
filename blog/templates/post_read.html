@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="post-read-wrap">
+        <div class="post">
+
+            <h1 class="post-read-title">{{ post.title }}</h1>
+            <div class="post-read-img"><img src = "/media/{{ post.image }}"/></div>
+            <div class="post-read-content">{{ post.content|safe }} </div>
+
+        </div>
+    </div>
+{% endblock content %}

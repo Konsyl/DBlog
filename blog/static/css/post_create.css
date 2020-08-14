@@ -1,0 +1,127 @@
+#publish-button{
+    width: 159px;
+    height: 50px;
+
+border-radius: 3px;
+    border: none;
+	background-color:	#E9399C;
+	font-family: Museo Cyrl;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	color: #FFFFFF;
+
+
+}
+#create-form-wrap{
+
+}
+#create-form-wrap label{
+	visibility: hidden;
+}
+#create-form-wrap h1{
+	visibility: hidden;
+}
+#create-form-wrap input[type="text"]{
+	width: 881px;
+	height: 48px;
+	border: 2px solid #CDCDCD;
+	border-radius: 3px;
+	color: #315AF2;
+	font-family: Circe Rounded;
+	font-size: 26px;
+	line-height: 31px;
+
+
+}
+.post-form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.in-form{
+	display: grid;
+    grid-template-columns: 80% 20% ;
+    grid-column-gap:10px;
+    grid-row-gap: 20px;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+#post-create-title input{
+	placeholder: ""
+}
+.ckeditor{
+	width: 881px;
+}
+
+.post-create-file input[type='file'] {
+  color: transparent;
+}
+.post-create-file{
+	border: 2px solid #CDCDCD;
+	min-height: 135px;
+	max-height: 200px;
+	width: 298px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+
+}
+.post-create-file input[type="file" i]{
+	visibility: hidden;
+
+}
+#file-text{
+	text-align: center;
+	font-family: Circe Rounded;
+	font-size: 24px;
+	line-height: 31px;
+/* identical to box height */
+
+text-align: center;
+
+color: #315AF2;
+
+}
+#file-load{
+	font-family: Museo Cyrl;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+text-align: center;
+	width: 155px;
+	margin: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	justify-self: center;
+	align-self: center;
+	vertical-align: middle;
+
+	color: #FFFFFF;
+	background: #315AF2;
+	border-radius: 3px;
+}
+.row {
+	align-self: center;
+	justify-self: center;
+	justify-content: center;
+	align-content: center;
+}
+.row img{
+	max-width: 70px;
+	max-height: 50px;
+}
+@font-face {
+    font-family: 'Circe Rounded';
+    src: local('Circe Rounded Regular'), local('Circe-Rounded-Regular'),
+        url('/static/fonts/CirceRounded/CirceRounded-Regular.woff2') format('woff2'),
+        url('/static/fonts/CirceRounded/CirceRounded-Regular.woff') format('woff'),
+        url("/static/fonts/CirceRounded/CirceRounded-Regular.ttf"); format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% block content %}
+	<div id="create-form-wrap">
+	<h1>New Post</h1>
+	<form enctype="multipart/form-data" method="POST" class="post-form">{% csrf_token %}
+		<div class="in-form">
+		{{ form.media}}
+
+			<div id="post-create-title">{{form.title}} </div>
+			<div><button type="submit" id="publish-button">Опубликовать</button> </div>
+			<div class="ckeditor">{{form.content}}</div>
+			<div class="post-create-file">
+				<p id="file-text">Загрузить изображение</p>
+				<p id="file-load" onclick="document.getElementById('id_image').click()">Файл</p>
+				{{form.image}}
+				<div class="row">
+        			<span id="output"></span>
+    			</div>
+			</div>
+	</div>
+
+	</form>
+	</div>
+<script>
+function handleFileSelect(evt) {
+    var file = evt.target.files;
+    var f = file[0];
+
+    if (!f.type.match('image.*')) {
+        alert("Image only please....");
+    }
+    var reader = new FileReader();
+
+    reader.onload = (function(theFile) {
+        return function(e) {
+
+            var span = document.createElement('span');
+            span.innerHTML = ['<img class="thumb" title="', escape(theFile.name), '" src="', e.target.result, '" />'].join('');
+            document.getElementById('output').insertBefore(span, null);
+        };
+    })(f);
+
+    reader.readAsDataURL(f);
+
+}
+document.getElementById('id_image').addEventListener('change', handleFileSelect, false);
+</script>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% load static %}
+
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/base.css' %}">
+		<link rel="stylesheet" href="{% static 'css/post_list.css' %}">
+		<link rel="stylesheet" href="{% static 'css/post_read.css' %}">
+		<link rel="stylesheet" href="{% static 'css/post_create.css' %}">
+		<title>New Tab)</title>
+
+	</head>
+	<body>
+		<div class = "base-header">
+			<div id = "logo-wrap">
+				<div onclick="window.location ='/blog/'" id="logo-content" >
+				<div id="logo"></div>
+				<div id="sign"><p>Блог</p></div>
+				</div>
+			</div>
+
+			<div class="button" onclick="window.location ='/blog/create'" >
+				<div class="button-content">
+					<p class="button-text">+ Добавить статью</p>
+				</div>
+			</div>
+		</div>
+		<div class = "content-container">
+
+
+				{% block content %}
+				{% endblock %}
+
+
+		</div>
+	</body>
+</html>

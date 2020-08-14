@@ -1,0 +1,243 @@
+.content-sign{
+    align-self: flex-start;
+
+    justify-self: auto;
+    margin-top: 1%;
+
+
+    font-family: Museo Cyrl;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+
+    letter-spacing: -0.416667px;
+
+    color: #315AF2;
+}
+.list-wrap-center{
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*latest post*/
+.latest-post{
+    width: 100%;
+    border-bottom: 2px solid #CDCDCD;
+    height: 440px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#disc-latest-post{
+    align-self: center;
+    justify-self: flex-start;
+    margin-left: 9%;
+
+    max-width: 200%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+
+#shard-latest-post{
+     font-family: Circe Rounded;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 136%;
+    max-width: 391px;
+    max-height: 108px;
+/* or 22px */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.416667px;
+
+    color: #000000;
+}
+
+#shard-latest-post img{
+    visibility: hidden;
+}
+
+.latest-button-text{
+
+}
+.button-latest-post{
+       position: absolute;
+    width: 150px;
+    height: 58px;
+
+
+    background: #315AF2;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.button-latest-post:hover{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.button-latest-post-text{
+    font-family: Museo Cyrl;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.416667px;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    align-self: center;
+    margin: 10px 0px;
+}
+#title-latest-post{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#img-latest-post{
+    align-self: center;
+    justify-self: flex-end;
+    margin-right: 13%;
+    height: 422px;
+    width: 462px;
+}
+#img-latest-post img{
+    height: 422px;
+    width: 462px;
+}
+#new{
+    margin: 0;
+
+
+    font-family: Circe Rounded;
+    font-size: 16px;
+    line-height: 20px;
+/* identical to box height, or 125% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.416667px;
+
+    color: #E9399C;
+}
+#title-latest-post{
+    font-family: Museo Cyrl;
+font-style: normal;
+font-weight: bold;
+font-size: 44px;
+line-height: 128%;
+/* or 56px */
+
+display: flex;
+align-items: center;
+letter-spacing: -0.416667px;
+
+color: #315AF2;
+}
+.list-post{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap:118px;
+    grid-row-gap: 20px;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+/*end latest post*/
+
+
+/*list*/
+
+.post-object{
+    border: 2px solid #CDCDCD;
+    width: 335px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.post-object:hover{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.img-wrap{
+    align-self: center;
+    width: 217px;
+    height: 112px;
+}
+.img-wrap img{
+    width: 100%;
+
+    max-height: 100%;
+    min-height: 100%;
+}
+
+
+
+.date{
+    letter-spacing: -0.416667px;
+    color: #979797;
+    font-family: Circe Rounded;
+    font-size: 12px;
+    line-height: 20px;
+
+    margin-left: 20px;
+}
+
+.post-title{
+    font-family: Circe Rounded;
+    font-size: 24px;
+    line-height: 120%;
+    height: 87px;
+    width: 248px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.416667px;
+    margin-bottom: 0;
+    color: #315AF2;
+    margin-left: 43px;
+    /*for line break*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+/*end list*/
+@font-face {
+    font-family: 'Museo Cyrl';
+    src: local('Museo Cyrl 500'),
+    local('MuseoCyrl-500'),
+    url('/static/fonts/museocyrl/Museocyrl500.woff2') format('woff2'),
+    url('/static/fonts/museocyrl/Museocyrl500.woff') format('woff'),
+    url('/static/fonts/museocyrl/Museocyrl500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

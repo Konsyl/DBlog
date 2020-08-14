@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="latest-post">
+    <div id="disc-latest-post">
+        <p id="new">New</p>
+        {% with posts|first as first %}
+        <h2 id="title-latest-post">
+            {{ first.title }}
+        </h2>
+        <h3 id="shard-latest-post">
+             {{first.content|safe}}
+        </h3>
+        <div class="button-latest-post" onclick="window.location= '/blog/post/{{ first.pk }}'">
+            <div class="button-latest-post-text">
+            Читать
+            </div>
+        </div>
+    </div>
+    <div id="img-latest-post"> <img src="/media/{{ first.image }}"/> </div>
+    {% endwith %}
+</div>
+
+<div class="list-wrap-center">
+    <div class="content-sign"><p>Другие статьи</p></div>
+    <div class="list-post">
+        {% for post in posts|slice:"1:10" %}
+        <div class="post-object" onclick="window.location= '/blog/post/{{ post.pk }}'">
+            <p class="date">{{ post.get_date}} </p>
+            <div class="img-wrap">
+                <img src="/media/{{ post.image }}"/>
+            </div>
+            <p class="post-title"> {{ post.title }} </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
