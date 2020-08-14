@@ -21,7 +21,7 @@ def create_post(request):
             post = form.save(commit=False)
             post.published_date = timezone.now()
             post.save()
-            return redirect('/blog', pk=post.pk)
+            return redirect('/blog/main/')
     else:
         form = PostForm()
     return render(request, 'post_create.html', {'form': form})

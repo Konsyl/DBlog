@@ -28,7 +28,7 @@ SECRET_KEY = '@xnbw4-b)1au(c5m754si#cg6czdb#5#3__i8609#wxr8vgi2h'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-
+'*'
 ]
 
 
@@ -91,7 +91,9 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+import dj_database_url
+db_from_url=dj_database_url.config()
+DATABASES['default'].update(db_from_url)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -117,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = ' Europe/Moscow'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -130,11 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/"),
-
-]
-#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, "app/static/"),]
+STATIC_ROOT = os.path.join(BASE_DIR, "app/static")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
